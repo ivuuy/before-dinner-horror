@@ -1,0 +1,35 @@
+; Before Dinner — a compact first-person horror game for Godot 4.5.
+config_version=5
+
+[application]
+config/name="晚饭之前 · Before Dinner"
+run/main_scene="res://scenes/main.tscn"
+config/features=PackedStringArray("4.5", "GL Compatibility")
+config/description="一场雨，一桌饭，一个不让你离开的家。"
+
+[display]
+window/size/viewport_width=1600
+window/size/viewport_height=900
+window/size/window_width_override=1280
+window/size/window_height_override=720
+window/stretch/mode="canvas_items"
+
+[rendering]
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+textures/default_filters/use_nearest_mipmap_filter=false
+textures/default_filters/anisotropic_filtering_level=2
+lights_and_shadows/directional_shadow/size=2048
+anti_aliasing/quality/msaa_3d=2
+environment/defaults/default_clear_color=Color(0.018, 0.024, 0.027, 1)
+
+[audio]
+driver/enable_input=false
+
+[physics]
+common/physics_ticks_per_second=60
+
+[layer_names]
+3d_physics/layer_1="House"
+3d_physics/layer_2="Player"
+3d_physics/layer_3="Granny"
